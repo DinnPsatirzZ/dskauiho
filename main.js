@@ -99,8 +99,7 @@ dhani.on("group-participants-update", async (anu) => {
 ⊛ *ᴀꜱᴀʟ ᴋᴏᴛᴀ :*
 
 
-𝙎𝙀𝙈𝙊𝙂𝘼 𝙆𝘼𝙆𝘼𝙆 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 
-𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`
+𝙎𝙀𝙈𝙊𝙂𝘼 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`
 	  let buff = await getBuffer(ppimg)
 	  dhani.sendMessage(mdata.id, image, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
       } else if (anu.action == 'remove') {
