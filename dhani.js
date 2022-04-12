@@ -114,18 +114,18 @@ module.exports = Dhani = async (Dhani, mek, _welkom) => {
 //══════════[ Mess Dll ]══════════//
 
 mess = {
-wait: '𝙋𝙍𝙊𝙎𝙀𝙎 ....',
-eror: '𝙈𝘼𝘼𝙁 𝙏𝙀𝙍𝙅𝘼𝘿𝙄 𝙆𝙀𝙎𝘼𝙇𝘼𝙃𝘼𝙉 !!',
-success: '𝙎𝙐𝙆𝙎𝙀𝙎 ✅️',
+wait: '_Tunggu Sebentar Banh..._',
+eror: '*Error Banh* 😅',
+success: '*Done Banh* 😁',
 error: {
-stick: '𝙈𝘼𝘼𝙁 𝙄𝙏𝙐 𝘽𝙐𝙆𝘼𝙉 𝙎𝙏𝙄𝘾𝙆𝙀𝙍 !!',
-Iv: '𝙇𝙄𝙉𝙆 𝙄𝙉𝙑𝘼𝙇𝙄𝘿 !!'
+stick: '_Afkh itu stiker banh ?_ 🤨📸',
+Iv: '_Link ny salah banh_ 😅'
 },
 only: {
-group: '𝙁𝙄𝙏𝙐𝙍 𝙃𝘼𝙉𝙔𝘼 𝘿𝘼𝙋𝘼𝙏 𝘿𝙄 𝙂𝙐𝙉𝘼𝙆𝘼𝙉 𝘿𝙄 𝘿𝘼𝙇𝘼𝙈 𝙂𝙍𝙐𝙋 !!',
-owner: '𝙁𝙄𝙏𝙐𝙍 𝙃𝘼𝙉𝙔𝘼 𝘿𝘼𝙋𝘼𝙏 𝘿𝙄 𝙂𝙐𝙉𝘼𝙆𝘼𝙉 𝙊𝙇𝙀𝙃 𝙊𝙒𝙉𝙀𝙍 𝘽𝙊𝙏 !!',
-admin: '𝙁𝙄𝙏𝙐𝙍 𝙃𝘼𝙉𝙔𝘼 𝘿𝘼𝙋𝘼𝙏 𝘿𝙄 𝙂𝙐𝙉𝘼𝙆𝘼𝙉 𝙊𝙇𝙀𝙃 𝘼𝘿𝙈𝙄𝙉 𝙂𝙍𝙐𝙋 !!',
-Badmin: '𝙅𝘼𝘿𝙄𝙆𝘼𝙉 𝘼𝘿𝙈𝙄𝙉 𝙅𝙄𝙆𝘼 𝙈𝘼𝙐 𝙂𝙐𝙉𝘼𝙆𝘼𝙉 𝙁𝙄𝙏𝙐𝙍  𝙄𝙏𝙐 !!'
+group: '_Cuma bisa dipake di grup banh_ 😅',
+owner: '_Cuma bisa dipake sm owner gwehj_ 😎',
+admin: '_Afkh kamu atmin ?_ 🤨📸',
+Badmin: '_Bapak luwh admin_ 😅'
 }
 }
 
@@ -285,8 +285,8 @@ Dhani.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
                             itemCount : 123,
                             status: 1,
                             surface : 1,
-                            message: `${tanggal}`, 
-                            orderTitle: `${botname}`,
+                            message: `Halo @${sender.split('@')[0]}`, 
+                            orderTitle: `Psatir Bot V3`,
                             thumbnail: fakedhani, //Gambarnye
                             sellerJid: '0@s.whatsapp.net' 
                           }
@@ -376,7 +376,7 @@ if (!isGroup) return
 if (!isAntiLink) return
 if (isGroupAdmins) return
 var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-reply(` *「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup`)
+reply(` *「 GROUP LINK DETECTOR 」*\nHmm luwh ngirim ling grup banh jadi gwehj kik`)
 setTimeout(() => {
 Dhani.groupRemove(from, [kic]).catch((e) => { fakeyt(`BOT HARUS JADI ADMIN`) })
 }, 0)
@@ -482,14 +482,13 @@ menu =
 𝗢 𝗣 𝗘 𝗡
 𝗦 𝗘 𝗪 𝗔 𝗕 𝗢 𝗧
 
-⊛ *1 Minggu : 5.000 ( 5K )*
-⊛ *1 Bulan : 10.000 ( 10K )*
-⊛ *Permanen : 15.000 ( 15K )*
-⊛ *Join Murid Bot : 20.000 ( 20K )*`
+⊛ *1 Minggu : 1.000*
+⊛ *1 Bulan : 3.000*
+⊛ *Permanen : 10.000*`
 teks =
 `*『 ${botname} 』*
 *${tanggal}*`
-Dhani.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'ᴍᴇɴᴜ' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'ᴏᴡɴᴇʀ' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Dhani.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: '📄 MENU' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '💻 OWNER' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 
 //══════════[ Fitur Sticker ]══════════//
@@ -536,7 +535,7 @@ console.log(`Started : ${cmd}`)
 console.log(`Error : ${err}`)
 fs.unlinkSync(media)
 tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-fakeyt(`Gagal, pada saat mengkonversi ${tipe} ke stiker`)
+fakeyt(`Gabisa gwehj banh ngubah ${tipe} ke stiker 😔`)
 })
 .on('end', function () {
 console.log('Finish')
@@ -558,7 +557,7 @@ media = await Dhani.downloadAndSaveMediaMessage(encmedia)
 ran = getRandom('.png')
 exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
-if (err) return fakeyt('Gagal, pada saat mengkonversi sticker ke gambar')
+if (err) return fakeyt('Gabisa 😅')
 buffer = fs.readFileSync(ran)
 Dhani.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih'})
 fs.unlinkSync(ran)
@@ -573,37 +572,35 @@ case 'ytmp3':
             teks = args.join(' ')
             fakeyt(mess.wait)
             res = await y2mateA(teks).catch(e => {
-            fakeyt('_[ ! ] Error Gagal Dalam Memasuki Web Y2mate_')
+            fakeyt('_Error banh_ 😅')
 })
-            result = `*YOUTUBE MP3 🎵*
+            result = `*YOUTUBE MP3*
 
-*Data Berhasil Didapatkan !!*
 ⌖ _Title : ${res[0].judul}_
 ⌖ _Ext : MP3_
 ⌖ _Size : ${res[0].size}_
 
-\`\`\`Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit\`\`\``
+\`\`\`Tunggu bentar banh\`\`\``
 
             sendFileFromUrl(res[0].thumb, image, {caption: result, quoted: mek}).then((lalu) => {
             sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', filename: res[0].output})
 })
             break
 case 'ytmp4':
-            if (args.length < 1) return fakeyt('Link Nya Mana?')
+            if (args.length < 1) return fakeyt('Mana ling ny cuy')
             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
             teks = args.join(' ')
             fakeyt(mess.wait)
             res = await y2mateV(teks).catch(e => {
-            reply('_[ ! ] Error Gagal Memasuki Web Y2mate_')
+            reply('_Error banh_ 😅')
 })
-            result = `*YOUTUBE MP4 🎥*
+            result = `*YOUTUBE MP4 *
 
-*Data Berhasil Didapatkan !!*
 ⌖ _Title : ${res[0].judul}_
 ⌖ _Ext : MP4_
 ⌖ _Size : ${res[0].size}_
 
-\`\`\`Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit\`\`\``
+\`\`\`Tunggu Sebentar Banh...\`\`\``
 
             sendFileFromUrl(res[0].thumb, image, {caption: result, quoted: mek}).then((lalu) => {
             sendFileFromUrl(res[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: res[0].output})
@@ -620,13 +617,13 @@ members_ids.push(mem.jid)
 vcard2 = 'BEGIN:VCARD\n'
 + 'VERSION:3.0\n'
 + `FN:${ownername}\n`
-+ `ORG: Creator ${ownername} ;\n`
++ `ORG:Psatir Handal ;\n`
 + `TEL;type=CELL;type=VOICE;waid=${owner}:${owner}\n`
 + 'END:VCARD'.trim()
 Dhani.sendMessage(from, {displayName: `Ownernya ${botname}`, vcard: vcard2}, contact, 
 { quoted: ftrol, 
 })
-fakeyt(`_Tuh Kak Ownerku_`)
+fakeyt(`_Owner gwehj tu banh 😎_`)
 break
 case 'bc':
              if (!isOwner && !mek.key.fromMe) return  reply(mess.only.owner)
@@ -642,11 +639,11 @@ case 'bc':
              } else {
              for (let _ of anu100) {
              Dhani.sendMessage(_.jid, 
-			{"contentText": `*「 PESAN SIARAN BOT 」*\n\n${body.slice(4)}`,
-			"footerText": `${tanggal}`,
+			{"contentText": `*「 BROADCAST BANH 」*\n\n${body.slice(4)}`,
+			"footerText": `Psatir Bot By DinXYZ.`,
 			"buttons": [
 			{"buttonId": `${prefix}menu`,
-			"buttonText": {"displayText": "ᴍᴇɴᴜ"
+			"buttonText": {"displayText": "📄 MENU"
 			},"type": "RESPONSE"}
 			], "headerType": 'LOCATION',
 			locationMessage: { degreesLatitude: '',
@@ -654,7 +651,7 @@ case 'bc':
 			jpegThumbnail: fakeimage,
 			}}, MessageType.buttonsMessage )
 }
-             fakeyt('Suksess broadcast')
+             fakeyt('Suksess broadcast Banh')
 }
              break
 
